@@ -1,12 +1,12 @@
 function oddishOrEvenish(number) {
-  let numberToBeDivided = 0;
+  let dividedNumber = 0;
   for (let digit = number.toString().length - 1; digit >= 0; digit--) {
-    const figure = Math.floor(number / Math.pow(10, digit));
-    numberToBeDivided += figure;
-    number -= figure * Math.pow(10, digit);
+    const numeral = Math.floor(number / Math.pow(10, digit));
+    dividedNumber += numeral;
+    number -= numeral * Math.pow(10, digit);
   }
 
-  if (numberToBeDivided % 2 == 1) {
+  if (dividedNumber % 2 == 1) {
     console.log("Odd");
     return "Odd";
   }
